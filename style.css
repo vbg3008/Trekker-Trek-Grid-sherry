@@ -1,0 +1,634 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #faf4f0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav {
+  display: flex;
+  line-height: 3rem;
+  justify-content: space-around;
+}
+nav .links ul {
+  display: flex;
+  gap: 2rem;
+}
+nav .links ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+nav .right {
+  position: relative;
+}
+nav .right button {
+  position: absolute;
+  top: 54%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  padding-right: 0.4rem;
+}
+nav .opener {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  padding: 0 1rem;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container-1 {
+  width: 100%;
+  background: url("./g.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas: "a" "b" "c" "d";
+}
+.container-1 .heading {
+  grid-area: a;
+}
+.container-1 .heading h1 {
+  font-size: 3rem;
+}
+.container-1 .heading h1 span {
+  color: #f6744a;
+}
+.container-1 .para {
+  grid-area: b;
+  font-size: large;
+}
+.container-1 .image-flex {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  gap: 1rem;
+}
+.container-1 .image-flex .sec1 {
+  width: 50%;
+}
+.container-1 .image-flex .sec1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.container-1 .image-flex .sec2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-1 .image-flex .sec2 img {
+  width: 100%;
+  height: 66%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.container-1 .image-flex .sec2 img:nth-child(2) {
+  height: 30%;
+  -o-object-position: 10% 10%;
+     object-position: 10% 10%;
+}
+.container-1 .btn {
+  grid-area: d;
+  text-align: center;
+}
+.container-1 .btn button {
+  padding: 0.5rem 2.4rem;
+  font-size: 1.3rem;
+  background-color: rgba(69, 65, 65, 0.978);
+  color: white;
+  border-radius: 999px;
+  border: 0;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container-2 .heading {
+  font-size: 1.4rem;
+}
+.container-2 .drop-down button {
+  display: none;
+}
+.container-2 .drop-down select {
+  border: 0;
+  font-size: 1.2rem;
+  outline: 0;
+  padding: 0 0.3rem;
+  background: transparent;
+}
+.container-2 .cards {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.container-2 .cards::-webkit-scrollbar {
+  display: none;
+}
+.container-2 .cards .card {
+  margin-right: 1rem;
+}
+.container-2 .cards .card img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-2 .cards .card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.container-2 .btn {
+  text-align: center;
+}
+.container-2 .btn button {
+  background-color: transparent;
+  border-radius: 9999px;
+  padding: 1rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.container-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container-3 .heading {
+  display: flex;
+}
+.container-3 .heading button {
+  display: none;
+}
+.container-3 .news {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container-3 .news .left {
+  width: 100%;
+  overflow: hidden;
+}
+.container-3 .news .left img {
+  width: 100%;
+  aspect-ratio: 1/0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 10% 10%;
+     object-position: 10% 10%;
+  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.container-3 .news .left h1 {
+  font-size: 1.3rem;
+}
+.container-3 .news .right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+.container-3 .news .right div {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  margin: 0.3rem 0;
+}
+.container-3 .news .right div .img {
+  width: 30%;
+  aspect-ratio: 1/1;
+}
+.container-3 .news .right div .img img {
+  border-radius: 20px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-3 .news .right div .text {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+.container-3 .news .right div .text h1 {
+  font-size: 1.3rem;
+}
+.container-3 .news button {
+  background-color: transparent;
+  border-radius: 9999px;
+  padding: 1rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 70%;
+  margin: auto;
+}
+
+.container-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.container-4 h1 {
+  font-size: 2.6rem;
+}
+.container-4 .reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container-4 .reviews .imgs img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+  border-radius: 20px;
+}
+.container-4 .reviews .videos video {
+  width: 100%;
+  aspect-ratio: 1/0.6;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+}
+.container-4 .reviews .videos button {
+  display: none;
+}
+.container-4 .reviews .text {
+  width: 100%;
+  padding-top: 1rem;
+}
+.container-4 .reviews .text .profile {
+  width: 100%;
+}
+.container-4 .reviews .text .profile .img-profile {
+  display: flex;
+  gap: 1rem;
+}
+.container-4 .reviews .text .profile .img-profile img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-4 .reviews .text .profile .img-profile .caption h1 {
+  font-size: 1.4rem;
+}
+.container-4 .reviews .text .profile .img-profile .caption p {
+  font-size: 1rem;
+}
+.container-4 .reviews .text .profile .review {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.container-4 .reviews .text .profile .review button {
+  background-color: transparent;
+  border-radius: 9999px;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 70%;
+  margin: auto;
+}
+
+.container-5 {
+  width: 100%;
+  aspect-ratio: 1/0.4;
+  background: url("https://plus.unsplash.com/premium_photo-1669048780078-e852a2eb7409?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.7rem;
+  position: relative;
+  z-index: -20;
+  text-align: center;
+}
+.container-5 h1 {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.container-5 .email {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+}
+.container-5 .email input {
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 0;
+  outline: 0;
+  text-align: left;
+}
+.container-5 .email button {
+  background-color: #f6744a;
+  color: white;
+  padding: 0.8rem 3rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 0;
+  outline: 0;
+}
+.container-5 h4 span {
+  border-bottom: 2px solid white;
+}
+
+.container-6 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.container-6 .sec1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container-6 .sec1 .socials .logo {
+  background-color: black;
+  color: white;
+  padding: 0.2rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer h1 {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+footer h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 0 3rem;
+  }
+  main {
+    gap: 4rem;
+  }
+  .container-1 {
+    grid-template-columns: 60% 1fr; /* Two equal columns */
+    grid-template-rows: auto auto; /* Two rows */
+    grid-template-areas: "a ." "b c" "d .";
+    gap: 0;
+  }
+  .container-1 .heading h1 {
+    font-size: 6rem;
+  }
+  .container-1 .para p {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+  .container-1 .image-flex {
+    grid-column: 2; /* Span all columns */
+    grid-row: span 3; /* Span two rows */
+  }
+  .container-1 .image-flex .sec1 {
+    height: 80%;
+    margin: auto;
+  }
+  .container-1 .btn {
+    text-align: start;
+    padding-top: 1.3em;
+  }
+  .container-2 .cards {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+  .container-2 .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .container-2 .cards .card img {
+    height: 80%;
+  }
+  .container-2 .drop-down {
+    display: flex;
+    width: 100%;
+    gap: 75%;
+  }
+  .container-2 .drop-down button {
+    display: block;
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 1rem 1.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .container-2 .btn {
+    display: none;
+  }
+  .container-3 .heading {
+    gap: 66%;
+  }
+  .container-3 .heading button {
+    display: block;
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 1rem 1.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: auto;
+  }
+  .container-3 .news {
+    flex-direction: row;
+  }
+  .container-3 .news button {
+    display: none;
+  }
+  .container-3 .news .left {
+    padding-top: 0.6rem;
+  }
+  .container-3 .news .right {
+    gap: 2.3rem;
+  }
+  .container-4 .reviews {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin: auto;
+  }
+  .container-4 .reviews .videos {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container-4 .reviews .videos button {
+    display: block;
+    display: block;
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 1rem 1.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: auto;
+  }
+  .container-4 .reviews .imgs {
+    width: 40%;
+  }
+  .container-4 .reviews .imgs img {
+    aspect-ratio: 1/0.82;
+  }
+  .container-4 .reviews .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container-4 .reviews .text {
+    width: 30%;
+  }
+  .container-4 .reviews .text .review button {
+    display: none;
+  }
+  .container-5 {
+    gap: 3rem;
+    font-size: 2rem;
+  }
+  .container-5 h1 {
+    color: white;
+    -webkit-text-fill-color: unset; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: unset;
+    -webkit-text-stroke-color: unset;
+  }
+  .container-5 .email {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+  }
+  .container-5 .email input {
+    padding: 1rem 12rem 1rem 1rem;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: 0;
+    outline: 0;
+    text-align: left;
+  }
+  .container-5 .email button {
+    background-color: #f6744a;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+  }
+  .container-6 {
+    text-align: left;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .container-6 .sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer h1 a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  nav .links {
+    display: none;
+  }
+  nav .right input {
+    width: 7rem;
+  }
+  nav .opener {
+    display: block;
+    pointer-events: all;
+  }
+  nav .open-menu {
+    position: absolute;
+    display: block;
+    top: 3rem;
+    padding-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 100%;
+    left: 0;
+    animation: come-in 0.5s ease-in-out;
+  }
+  nav .open-menu ul {
+    flex-direction: column;
+    gap: 1em;
+    line-height: initial;
+    text-align: center;
+    width: 100%;
+  }
+  @keyframes come-in {
+    0% {
+      opacity: 0;
+      top: -100%;
+      left: -100%;
+    }
+    100% {
+      opacity: 1;
+      top: 3rem;
+      left: 0;
+    }
+  }
+}
