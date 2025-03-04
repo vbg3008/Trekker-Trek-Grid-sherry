@@ -28,15 +28,24 @@ nav .links ul li {
   text-decoration: none;
   list-style-type: none;
 }
-nav .right {
-  position: relative;
+nav .right input {
+  z-index: 1;
+  padding: 0.4rem 0.4rem;
+  border-radius: 999px;
+}
+nav .right input::-moz-placeholder {
+  padding-left: 0.3rem;
+}
+nav .right input::placeholder {
+  padding-left: 0.3rem;
 }
 nav .right button {
-  position: absolute;
-  top: 54%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  padding-right: 0.4rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  border: 0;
+  outline: 0;
+  background: black;
+  color: white;
 }
 nav .opener {
   display: none;
